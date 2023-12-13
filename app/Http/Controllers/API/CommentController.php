@@ -93,7 +93,7 @@ class CommentController extends Controller
         if ($res){
             $keys = DB::table('cache')->whereRaw('`key` GLOB :key', ['key'=>'commentAll:article*[0-9]/*[0-9]'])->get();
             foreach($keys as $key){
-                Cache::forget($key->key);
+                Cache::flush($key->key);
             }
         }
         return response()->json(['article'=>$request->article_id, 'res' => $res]);
@@ -106,7 +106,7 @@ class CommentController extends Controller
         if ($res){
             $keys = DB::table('cache')->whereRaw('`key` GLOB :key', ['key'=>'commentAll:article*[0-9]/*[0-9]'])->get();
             foreach($keys as $key){
-                Cache::forget($key->key);
+                Cache::flush($key->key);
             }
         }
         // $comment = NULL;

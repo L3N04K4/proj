@@ -135,7 +135,7 @@ class ArticleController extends Controller
         if ($res){
             $keys = DB::table('cache')->whereRaw('`key` GLOB :key', [':key'=>'articleAll:*[0-9]'])->get();
             foreach ($keys as $key){
-               Cache::forget($key->key); 
+               Cache::flush($key->key); 
             }
         }
         return response($res);
@@ -156,7 +156,7 @@ class ArticleController extends Controller
         if ($res){
             $keys = DB::table('cache')->whereRaw('`key` GLOB :key', [':key'=>'articleAll:*[0-9]'])->get();
             foreach ($keys as $key){
-               Cache::forget($key->key); 
+               Cache::flush($key->key); 
             }
         }
         return response($res);
