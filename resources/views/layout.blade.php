@@ -20,7 +20,7 @@
       margin-bottom: 360px;
     }
     footer {
-      background-color: #c38d9e;
+      background-color: #fff;
       padding: 10px;
       /* position: fixed; */
       right: 0;
@@ -28,11 +28,11 @@
       text-align: center; 
       width: 100%;   
       font-size: 19px;
-      color: #fafaff;  
+      color: #000;  
     }
     .footer__container {
-      margin-top: 50px;
-      margin-bottom: 50px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
   </style>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
